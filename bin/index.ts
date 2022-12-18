@@ -1,9 +1,4 @@
-// oop
-// university contains students Teachers, sections collections
-// human class
-// student & teacher will extend human
-// section (props)>= timing, teacher students
-// teachers kon c classes parharahy hain, students kon c classes le rahy hain
+#! /usr/bin/env node
 
 import { university } from "../models/university.js";
 

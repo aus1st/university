@@ -1,4 +1,6 @@
 import chalk from "chalk";
+import figlet from "figlet";
+import gradient from "gradient-string";
 import inquirer from "inquirer";
 export class university {
     constructor() {
@@ -6,6 +8,7 @@ export class university {
         this.teachers = [];
         this.sections = [];
         this.degrees = ['BSCS', 'MCS', 'MBA', 'MSCS'];
+        this.sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
         this.builSections();
         //console.log(this.sections);
     }
@@ -71,7 +74,16 @@ export class university {
                 studentSection: studentUpdate.stdSec !== null ? studentUpdate.stdSec : stndt.studentSection });
         }
     }
+    async indexTitle() {
+        console.clear();
+        console.log();
+        figlet('University - O.O.P', (error, data) => {
+            console.log(gradient.pastel(data));
+        });
+        await this.sleep();
+    }
     async startProg() {
+        await this.indexTitle();
         try {
             let opt = await inquirer.prompt({
                 name: 'option',

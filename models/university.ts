@@ -1,4 +1,6 @@
 import chalk from "chalk";
+import figlet from "figlet";
+import gradient from "gradient-string";
 import inquirer from "inquirer";
 import { section } from "./section.js";
 import { student } from "./student.js";
@@ -97,8 +99,19 @@ async addStudent(studentId= 0) {
     
 }
 
+sleep = (ms=1000) => new Promise((r)=>setTimeout(r,ms));
+
+async indexTitle() {
+    console.clear();
+    console.log();
+    figlet('University - O.O.P',(error,data)=>{
+        console.log(gradient.pastel(data));
+    });
+    await this.sleep();
+}
 
 async startProg() {
+    await this.indexTitle();
     try {
         
     
