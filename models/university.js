@@ -265,6 +265,7 @@ export class university {
             let t = this.teachers.filter(x => x.teacherName === teach.tchr)[0];
             let x = this.students.filter(s => t.degrees.includes(s.enrolledDgree));
             if (x !== null && x.length > 0) {
+                console.log(`Students for Sir ${t.teacherName}`);
                 console.table(x);
             }
             else {

@@ -171,9 +171,6 @@ else {
 async addTeacher(teacherId = 0) {
     //return new Promise((r)=>{
     if(teacherId === 0) {
-       
-
-        
         let teacherIdRan = Math.floor(Math.random()*20);
         let teacherInput = await inquirer.prompt([
             {
@@ -329,6 +326,7 @@ async debugPrint(msg:any) {
 
             let x = this.students.filter(s=> t.degrees.includes(s.enrolledDgree));
             if(x!== null && x.length > 0) {
+                console.log(`Students for Sir ${t.teacherName}`);
                 console.table(x);
             } else {
                 console.log(chalk.red(`No Student Found by ${teach.tchr}`));
