@@ -2,6 +2,8 @@
 import { university } from "../models/university.js";
 let uni = new university();
 let keepContinue = false;
+await uni.indexTitle();
+
 while (!keepContinue) {
     await uni.startProg();
 }

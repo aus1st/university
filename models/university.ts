@@ -111,7 +111,6 @@ async indexTitle() {
 }
 
 async startProg() {
-    await this.indexTitle();
     try {
         
     
@@ -342,7 +341,7 @@ async debugPrint(msg:any) {
                 console.log(`Students for Sir ${t.teacherName}`);
                 console.table(x);
             } else {
-                console.log(chalk.red(`No Student Found by ${teach.tchr}`));
+                console.log(chalk.red(`No Student Found by ${t.teacherName}`));
             }
             setTimeout(r,0);
         });

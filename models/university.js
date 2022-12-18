@@ -83,7 +83,6 @@ export class university {
         await this.sleep();
     }
     async startProg() {
-        await this.indexTitle();
         try {
             let opt = await inquirer.prompt({
                 name: 'option',
@@ -281,7 +280,7 @@ export class university {
                 console.table(x);
             }
             else {
-                console.log(chalk.red(`No Student Found by ${teach.tchr}`));
+                console.log(chalk.red(`No Student Found by ${t.teacherName}`));
             }
             setTimeout(r, 0);
         });
